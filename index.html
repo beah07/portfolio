@@ -1,133 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beah Rocero | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .hero-bg {
+        background-color: #2e3048;
+        background-image: linear-gradient(315deg, #2e3048 0%, #171822 74%);
+    }
+  </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">MyPortfolio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
-        <li class="nav-item"><a class="nav-link" href="#tech">Tech Stacks</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
+<nav class="sticky top-0 z-50 bg-white shadow-lg backdrop-blur-md bg-opacity-70">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <a class="text-xl font-bold text-gray-900" href="#">MyPortfolio</a>
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-gray-900 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
     </div>
+    <ul id="menu" class="hidden md:flex space-x-6 text-gray-700 font-medium">
+      <li><a class="hover:text-blue-600 transition duration-300" href="#profile">Profile</a></li>
+      <li><a class="hover:text-blue-600 transition duration-300" href="#tech">Tech Stacks</a></li>
+      <li><a class="hover:text-blue-600 transition duration-300" href="#projects">Projects</a></li>
+      <li><a class="hover:text-blue-600 transition duration-300" href="#contact">Contact</a></li>
+    </ul>
   </div>
 </nav>
 
 <!-- Hero Section -->
-<header class="bg-primary text-white text-center py-5">
-  <div class="container">
-    <h1 class="display-4">Hi, I'm <span class="fw-bold">Beah Rocero</span></h1>
-    <p class="lead">BSIT Student | Web & App Developer | UI/UX Enthusiast</p>
-    <a href="#projects" class="btn btn-light btn-lg mt-3">Explore My Work</a>
+<header class="hero-bg text-white text-center py-20 lg:py-32 rounded-b-3xl shadow-lg">
+  <div class="container mx-auto px-4">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+      Hi, I'm <span class="text-blue-400">Beah Rocero</span>
+    </h1>
+    <p class="mt-4 text-sm sm:text-base md:text-lg lg:text-xl font-light opacity-80 max-w-2xl mx-auto">
+      BSIT Student | Web & App Developer | UI/UX Enthusiast
+    </p>
+    <a href="#projects" class="mt-8 inline-block px-8 py-3 bg-white text-blue-600 font-bold rounded-full shadow-lg hover:bg-gray-100 transform hover:scale-105 transition duration-300">
+      Explore My Work
+    </a>
   </div>
 </header>
 
 <!-- Profile Section -->
-<section id="profile" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Profile</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <h4>About</h4>
-        <p>I am an aspiring IT professional passionate about developing web and mobile applications while continuously learning new technologies.</p>
-        <h4>Credentials</h4>
-        <ul>
+<section id="profile" class="py-16 md:py-24">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <h2 class="text-4xl font-bold text-center mb-12">Profile</h2>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 transform hover:scale-105 transition duration-300">
+        <h4 class="text-2xl font-semibold mb-4 text-blue-600">About Me</h4>
+        <p class="text-gray-700 leading-relaxed">I am an aspiring IT professional passionate about developing web and mobile applications while continuously learning new technologies. My goal is to create intuitive and impactful digital experiences.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 transform hover:scale-105 transition duration-300">
+        <h4 class="text-2xl font-semibold mb-4 text-blue-600">Credentials & Education</h4>
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
           <li>Java NCIII Certified</li>
           <li>Intern at Ollopa Corp (SIL)</li>
-        </ul>
-      </div>
-      <div class="col-md-6">
-        <h4>Achievements</h4>
-        <ul>
-          <li>Developed a Local Products E-commerce Website</li>
-          <li>Created Barangay Profiling & Health Info System</li>
-        </ul>
-        <h4>Education</h4>
-        <ul>
           <li>BSIT - BCRV Tech-Voc Inc.</li>
           <li>Continuous learning in modern frameworks</li>
         </ul>
+      </div>
+      <div class="md:col-span-2 bg-white p-8 rounded-2xl shadow-md border border-gray-100 transform hover:scale-105 transition duration-300">
+          <h4 class="text-2xl font-semibold mb-4 text-blue-600">Key Achievements</h4>
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li>Developed a Local Products E-commerce Website, improving local business visibility and sales.</li>
+            <li>Created a Barangay Profiling & Health Info System to streamline community data management.</li>
+          </ul>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Tech Stacks Section -->
-<section id="tech" class="bg-light py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Tech Stacks</h2>
-    <div class="row text-center">
-      <div class="col-md-4">
-        <div class="card p-3 h-100">
-          <h4>Softwares</h4>
-          <p>Visual Studio, Eclipse, NetBeans, Laragon, Figma</p>
-        </div>
+<section id="tech" class="bg-gray-100 py-16 md:py-24">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <h2 class="text-4xl font-bold text-center mb-12">Tech Stacks</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+      <div class="bg-white p-8 rounded-2xl shadow-md transform hover:scale-105 transition duration-300">
+        <h4 class="text-2xl font-semibold mb-4 text-blue-600">Softwares</h4>
+        <p class="text-gray-700 leading-relaxed">Visual Studio, Eclipse, NetBeans, Laragon, Figma</p>
       </div>
-      <div class="col-md-4">
-        <div class="card p-3 h-100">
-          <h4>Skills</h4>
-          <p>UI/UX Design, Database Management, Responsive Web Design</p>
-        </div>
+      <div class="bg-white p-8 rounded-2xl shadow-md transform hover:scale-105 transition duration-300">
+        <h4 class="text-2xl font-semibold mb-4 text-blue-600">Skills</h4>
+        <p class="text-gray-700 leading-relaxed">UI/UX Design, Database Management, Responsive Web Design</p>
       </div>
-      <div class="col-md-4">
-        <div class="card p-3 h-100">
-          <h4>Programming Languages</h4>
-          <p>Java, C#, Python, JavaScript, SQL</p>
-        </div>
+      <div class="bg-white p-8 rounded-2xl shadow-md transform hover:scale-105 transition duration-300">
+        <h4 class="text-2xl font-semibold mb-4 text-blue-600">Languages</h4>
+        <p class="text-gray-700 leading-relaxed">Java, C#, Python, JavaScript, SQL</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Projects</h2>
-    <div class="row g-4">
-      <!-- UI/UX -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="UI/UX Project">
-          <div class="card-body">
-            <h5 class="card-title">UI/UX Redesign</h5>
-            <p class="card-text">Redesigned a local government portal with modern UI/UX principles using Figma & Bootstrap.</p>
-            <a href="#" class="btn btn-primary">View Project</a>
-          </div>
+<section id="projects" class="py-16 md:py-24">
+  <div class="container mx-auto px-4 max-w-5xl">
+    <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- UI/UX Project Card -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 transform hover:-translate-y-2 transition duration-300">
+        <img src="https://placehold.co/600x400/8086FF/FFFFFF?text=UI/UX+Redesign" class="w-full h-48 object-cover" alt="UI/UX Project">
+        <div class="p-6">
+          <h5 class="text-xl font-semibold mb-2">UI/UX Redesign</h5>
+          <p class="text-gray-600 leading-relaxed">Redesigned a local government portal with modern UI/UX principles using Figma & Bootstrap.</p>
+          <a href="#" class="mt-4 inline-block text-blue-600 font-medium hover:underline">View Project &rarr;</a>
         </div>
       </div>
-      <!-- Media -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Media Project">
-          <div class="card-body">
-            <h5 class="card-title">Media Website</h5>
-            <p class="card-text">Built a multimedia blog with video integration and responsive design for news content.</p>
-            <a href="#" class="btn btn-primary">View Project</a>
-          </div>
-        </div>
-      </div>
-      <!-- App -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="App Project">
-          <div class="card-body">
-            <h5 class="card-title">Mobile App</h5>
-            <p class="card-text">Developed a cross-platform mobile app for local product catalog using Java & Firebase.</p>
-            <a href="#" class="btn btn-primary">View Project</a>
-          </div>
+      <!-- Media Website Project Card -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 transform hover:-translate-y-2 transition duration-300">
+        <img src="https://placehold.co/600x400/8086FF/FFFFFF?text=Media+Website" class="w-full h-48 object-cover" alt="Media Project">
+        <div class="p-6">
+          <h5 class="text-xl font-semibold mb-2">Media Website</h5>
+          <p class="text-gray-600 leading-relaxed">Built a multimedia blog with video integration and responsive design for news content.</p>
+          <a href="#" class="mt-4 inline-block text-blue-600 font-medium hover:underline">View Project &rarr;</a>
         </div>
       </div>
     </div>
@@ -135,20 +135,47 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="bg-dark text-white py-5">
-  <div class="container text-center">
-    <h2>Contact Me</h2>
-    <p>Email: beah@example.com</p>
-    <p>LinkedIn: linkedin.com/in/beahrocero</p>
-    <p>GitHub: github.com/beahrocero</p>
+<section id="contact" class="bg-gray-800 text-white py-16 md:py-24">
+  <div class="container mx-auto px-4 max-w-xl text-center">
+    <h2 class="text-4xl font-bold mb-6">Get in Touch</h2>
+    <p class="mb-8 text-gray-300">Have a project in mind or just want to say hi? Feel free to contact me using the form below.</p>
+    
+    <form class="space-y-6">
+        <div>
+            <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+        </div>
+        <div>
+            <input type="email" id="email" name="email" placeholder="Your Email" class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+        </div>
+        <div>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"></textarea>
+        </div>
+        <button type="submit" class="w-full py-4 bg-blue-600 rounded-lg font-bold hover:bg-blue-700 transition duration-300">Send Message</button>
+    </form>
+
+    <div class="mt-8 text-sm text-gray-400">
+      <p class="mb-1">Email: beah@example.com</p>
+      <p class="mb-1">LinkedIn: linkedin.com/in/beahrocero</p>
+      <p>GitHub: github.com/beahrocero</p>
+    </div>
+
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-secondary text-white text-center py-3">
-  <p>&copy; 2025 Beah Rocero | Portfolio</p>
+<footer class="bg-gray-900 text-white text-center py-6">
+  <p>&copy; 2025 Beah Rocero | Portfolio. All rights reserved.</p>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Simple JS for mobile menu toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
 </body>
 </html>
